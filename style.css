@@ -1,0 +1,547 @@
+/* Reset dan standar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color:  #87CEEB;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  position: relative;
+}
+
+header .logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 60px;
+}
+
+header h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+header p {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* Navigasi */
+nav {
+  background-color: #005ea8;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #007acc;
+}
+
+/* About */
+#about {
+  padding: 50px 0;
+  text-align: center;
+}
+
+#about .flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+#about .photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.photo {
+  overflow: hidden; /* Menyembunyikan bagian gambar yang melampaui batas */
+}
+
+.profile-photo {
+  transition: transform 0.3s ease; /* Menambahkan transisi halus */
+  width: 100%; /* Pastikan gambar responsif */
+  height: auto; /* Menjaga rasio aspek gambar */
+}
+
+.profile-photo:hover {
+  transform: scale(1.1); /* Memperbesar gambar saat hover */
+}
+
+#about .info {
+  max-width: 600px;
+  text-align: left;
+  background-color:  #87CEEB;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Proyek */
+#projects {
+  padding: 50px 0;
+  background-color:  #87CEEB;
+}
+
+.project {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+/* Riwayat Pendidikan */
+#education {
+  padding: 50px 0;
+  background-color: white;
+}
+
+#education ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+#education ul li {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+/* Keahlian */
+#skills {
+  background-color:  #87CEEB;
+  padding: 50px 0;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.skill-icon, .project-icon {
+  font-size: 40px;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.skills-container, .projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.skill, .project {
+  flex: 1 1 calc(25% - 20px);
+  text-align: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Warna Khusus untuk Ikon */
+.js-icon {
+color: #F7DF1E; /* Kuning khas JavaScript */
+}
+.python-icon {
+color: #306998; /* Biru khas Python */
+}
+.php-icon {
+color: #4F5D95; /* Ungu khas PHP */
+}
+.cpp-icon {
+color: #00599C; /* Biru khas C++ */
+}
+
+.skill-icon {
+font-size: 40px;
+margin-bottom: 10px;
+}
+/* Ikon Pengalaman Kerja */
+.experience-icon {
+font-size: 30px;
+color: #007BFF; /* Warna biru default */
+margin-bottom: 5px;
+}
+
+/* Tata Letak Pengalaman */
+.experience-container {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.experience {
+background-color: #f9f9f9;
+border: 1px solid #ddd;
+padding: 15px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* Ikon untuk Pendidikan */
+.education-icon {
+font-size: 20px;
+color: #007BFF; /* Warna biru default */
+margin-right: 10px;
+vertical-align: middle;
+}
+
+/* Gaya Teks Pendidikan */
+#education ul {
+list-style: none; /* Hilangkan bullet point */
+padding: 0;
+}
+
+#education li {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+font-size: 16px;
+}
+/* Ikon Skill */
+.skill {
+margin-bottom: 30px;
+text-align: center;
+}
+
+.frameworks {
+display: none;
+text-align: center;
+margin-top: 10px;
+font-size: 16px;
+}
+
+.skill:hover .frameworks {
+display: block;
+}
+
+.frameworks i {
+font-size: 30px;
+margin: 5px;
+}
+
+.js-icon { color: #F7DF1E; }  /* Kuning JS */
+.python-icon { color: #306998; } /* Biru Python */
+.php-icon { color: #4F5D95; } /* Ungu PHP */
+.cpp-icon { color: #00599C; } /* Biru C++ */
+
+.frameworks i.react { color: #61DAFB; }
+.frameworks i.angular { color: #DD0031; }
+.frameworks i.vue { color: #4FC08D; }
+.frameworks i.nodejs { color: #339933; }
+
+.frameworks i.flask { color: #000000; }
+.frameworks i.django { color: #092E20; }
+
+.frameworks i.cmake { color: #064F8C; }
+.frameworks i.boost { color: #005C9C; }
+.skills-container {
+  display: flex;
+  justify-content: space-evenly; /* Menyebarkan ikon secara merata */
+  align-items: center; /* Menyelaraskan ikon di tengah secara vertikal */
+  flex-wrap: wrap; /* Membungkus ikon ke baris berikutnya jika diperlukan */
+}
+
+.skill {
+  text-align: center;
+  margin: 10px;
+}
+
+.skill i {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+#education {
+  padding: 50px 0;
+  background-color: white;
+}
+
+.education-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.education-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.education-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.education-card h3 {
+  margin-top: 10px;
+}
+
+.education-card i {
+  font-size: 2rem;
+  color: #ffbb33;
+}
+/* Styling for Contact Section */
+#contact {
+  background-color: #f4f4f4;
+  padding: 40px 0;
+  text-align: center;
+}
+
+#contact .card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.contact-icons a {
+  font-size: 1.8rem;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+  color: #007bff; /* Blue color on hover */
+}
+
+/* Footer Styling */
+footer {
+  background-color:  #87CEEB;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Optional: Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .contact-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.skill:hover .frameworks {
+  display: block;
+}
+/* Efek Hover untuk Card Proyek */
+.project {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  transition: all 0.3s ease-in-out; /* Menambahkan transisi halus */
+}
+
+.project:hover {
+  background-color: #f0f8ff; /* Ubah warna latar belakang saat hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Membesar bayangan saat hover */
+  transform: translateY(-5px); /* Memberikan efek sedikit terangkat */
+}
+.education:hover{
+  background-color: #f0f8ff; /* Ubah warna latar belakang saat hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Membesar bayangan saat hover */
+  transform: translateY(-5px); /* Memberikan efek sedikit terangkat */
+}
+
+/* Efek Hover untuk Card Kontak */
+#contact .card {
+  background-color: #ffffff; /* Warna latar belakang asli */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  margin: 0 auto;
+  transition: all 0.3s ease-in-out; /* Transisi halus saat hover */
+}
+
+#contact .card:hover {
+  background-color: #87CEEB; /* Mengubah latar belakang menjadi sky blue */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Membesar bayangan saat hover */
+  transform: translateY(-5px); /* Efek card terangkat sedikit */
+}
+/* Efek Hover untuk Card Pengalaman Kerja */
+.experience {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out; /* Transisi halus saat hover */
+}
+
+.experience:hover {
+  background-color: #87CEEB; /* Mengubah latar belakang menjadi sky blue */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Membesar bayangan saat hover */
+  transform: translateY(-5px); /* Efek card terangkat sedikit */
+}
+@media (max-width: 1024px) {
+  /* Aturan untuk tablet */
+  nav ul {
+    flex-direction: column; /* Mengubah arah navigasi menjadi kolom */
+  }
+
+  #about .flex-container {
+    flex-direction: column; /* Mengubah arah flex menjadi kolom */
+  }
+
+  .skills-container {
+    flex-direction: column; /* Mengubah arah flex menjadi kolom */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Aturan untuk ponsel */
+  header h1 {
+    font-size: 30px; /* Mengurangi ukuran font untuk judul */
+  }
+
+  nav ul li {
+    margin: 5px 0; /* Mengurangi margin untuk navigasi */
+  }
+
+  #about .info {
+    padding: 10px; /* Mengurangi padding untuk informasi */
+  }
+}
+.menu-button {
+    display: none; /* Sembunyikan tombol di desktop */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block; /* Tampilkan tombol di perangkat mobile */
+    }
+
+    .sidebar {
+        left: -250px; /* Sembunyikan sidebar di luar layar */
+    }
+
+    .sidebar.active {
+        left: 0; /* Tampilkan sidebar saat aktif */
+    }
+}
+.skill, .project {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover, .project:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+.profile-photo, .project img {
+  max-width: 100%;
+  height: auto;
+}
+.contact-icons a {
+  font-size: 30px;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.contact-icons a:hover {
+  transform: scale(1.2);
+}
+
+.contact-icons a .fab.fa-instagram {
+  color: #E4405F;
+}
+.contact-icons a .fab.fa-facebook-f {
+  color: #1877F2;
+}
+.contact-icons a .fab.fa-whatsapp {
+  color: #25D366;
+}
+.contact-icons a .fab.fa-linkedin {
+  color: #0A66C2;
+}
+.contact-icons a .fas.fa-envelope {
+  color: #EA4335;
+}
+
+
+
+
+
